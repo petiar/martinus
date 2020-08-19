@@ -1,0 +1,7 @@
+<ul>
+    {% for book in books %}
+        <li><a href="{{ url('book', {id: book.id}) }}">{{ book.title }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{{ url('books', {page: page - 1}) }}">Predchádzajúca stránka</a>
+<a href="{{ url('books', {page: page + 1}) }}">Nasledujúca stránka</a>
